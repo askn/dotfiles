@@ -1,0 +1,47 @@
+[user]
+	name = Aşkın Gedik
+	email = askn@bil.omu.edu.tr
+[alias]
+	a = add
+	b = branch
+	c = commit
+	cl = clone
+	co = checkout
+	d = diff
+	f = fetch
+	h = help
+	la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	l = log --graph --decorate --pretty=oneline --abbrev-commit
+	m = merge
+	pl = pull
+	p = push
+	re = reset --hard
+	r = remote
+	s = status -sb
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[credential]
+	helper = default
+[diff]
+	renames = copies
+
+[core]
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = vim
