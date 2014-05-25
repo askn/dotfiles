@@ -6,6 +6,4 @@ install:
 	
 	[ -f ~/.gitconfig ] || ln -s $(PWD)/gitconfig ~/.gitconfig
 	
-	[ -f ~/.inputrc ] || ln -s $(PWD)/inputrc ~/.inputrc
-
-
+	[ -f ~/.inputrc ] || ln -s $(PWD)/inputrc ~/.inputrc  
