@@ -3,4 +3,5 @@ syntax on
 filetype plugin indent on
 
 let g:go_fmt_command = "gofmt"
-let g:go_fmt_fail_silently = 1
+" let g:go_fmt_fail_silently = 1
+let g:go_disable_autoinstall = 1
