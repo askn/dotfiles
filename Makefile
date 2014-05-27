@@ -6,6 +6,7 @@ install:
 	[ -f ~/.bash_export ] || ln -s $(PWD)/bash_export ~/.bash_export
 	
 	[ -f ~/.gitconfig ] || ln -s $(PWD)/gitconfig ~/.gitconfig
+	[ -f ~/.gitignore_global ] || ln -s $(PWD)/gitignore_global ~/.gitignore_global
 	
 	[ -f ~/.inputrc ] || ln -s $(PWD)/inputrc ~/.inputrc
 
