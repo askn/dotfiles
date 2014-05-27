@@ -1,0 +1,5 @@
+export PATH=/opt/go_appengine:$PATH
+export PATH=$PATH:/usr/local/go/bin
+
+export GOPATH=$HOME/_/go
+export PATH=$PATH:$GOPATH/bin
