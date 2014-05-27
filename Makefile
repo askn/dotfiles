@@ -11,3 +11,6 @@ install:
 	[ -f ~/.inputrc ] || ln -s $(PWD)/inputrc ~/.inputrc
 
 	[ -f ~/.tmux.conf ] || ln -s $(PWD)/tmux.conf ~/.tmux.conf
+
+	ln -sfn $(PWD)/vim ~/.vim
+	ln -s $(PWD)/vim/vimrc ~/.vimrc

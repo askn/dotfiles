@@ -37,8 +37,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[credential]
-	helper = default
 [diff]
 	renames = copies
 
@@ -48,3 +46,5 @@
 	excludesfile = ~/.gitignore_global
 [push]
 	default = simple
+[credential]
+	helper = cache
