@@ -5,3 +5,6 @@ filetype plugin indent on
 let g:go_fmt_command = "gofmt"
 " let g:go_fmt_fail_silently = 1
 let g:go_disable_autoinstall = 1
+
+" Remove trailing spaces.
+command! -nargs=0 WS %s/\s\+$//gce
