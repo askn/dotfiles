@@ -8,3 +8,6 @@ let g:go_disable_autoinstall = 1
 
 " Remove trailing spaces.
 command! -nargs=0 WS %s/\s\+$//gce
+
+set laststatus=2
+let g:airline_theme='wombat'
