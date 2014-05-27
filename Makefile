@@ -8,3 +8,5 @@ install:
 	[ -f ~/.gitconfig ] || ln -s $(PWD)/gitconfig ~/.gitconfig
 	
 	[ -f ~/.inputrc ] || ln -s $(PWD)/inputrc ~/.inputrc
+
+	[ -f ~/.tmux.conf ] || ln -s $(PWD)/tmux.conf ~/.tmux.conf
