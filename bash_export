@@ -1,3 +1,5 @@
+export LC_ALL=en_US.UTF-8
+
 export PATH=/opt/go_appengine:$PATH
 export PATH=$PATH:/usr/local/go/bin
 

@@ -4,3 +4,6 @@
 [submodule "vim/bundle/tComment"]
 	path = vim/bundle/tComment
 	url = https://github.com/vim-scripts/tComment
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
