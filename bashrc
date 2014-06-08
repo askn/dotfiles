@@ -51,3 +51,6 @@ if ! shopt -oq posix; then
 fi
 
 [ -n "$PS1" ] && source ~/.bash_profile
+
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
