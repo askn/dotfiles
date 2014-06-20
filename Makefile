@@ -12,5 +12,6 @@ install:
 
 	[ -f ~/.tmux.conf ] || ln -s $(PWD)/tmux.conf ~/.tmux.conf
 
-	ln -sfn $(PWD)/vim ~/.vim
-	ln -s $(PWD)/vim/vimrc ~/.vimrc
+	[ -d ~/.vim ] || ln -sfn $(PWD)/vim ~/.vim
+	[ -f ~/.vimrc ] || ln -s $(PWD)/vim/vimrc ~/.vimrc
+	ln -s $(PWD)/Xresources ~/.Xresources

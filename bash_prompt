@@ -16,7 +16,7 @@ if tput setaf 1 &> /dev/null; then
 		ORANGE=$(tput setaf 172)
 		GREEN=$(tput setaf 190)
 		PURPLE=$(tput setaf 141)
-		WHITE=$(tput setaf 256)
+		WHITE=$(tput setaf 7)
 	else
 		MAGENTA=$(tput setaf 5)
 		ORANGE=$(tput setaf 4)
@@ -55,4 +55,7 @@ function parse_git_branch() {
 # in the iterm tab
 # \[\e]1;\]$(basename $(dirname $PWD))/\W\[\a\]
 
-PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]\[${BOLD}${MAGENTA}\]\u "
+PS1+="\[${RESET}${WHITE}\]at \[${BOLD}${ORANGE}\]\h "
+PS1+="\[${RESET}${WHITE}\]in \[${BOLD}${GREEN}\]\w\[${RESET}${WHITE}\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")"
+PS1+="\[${BOLD}${PURPLE}\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
