@@ -5,3 +5,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/_/go
 export PATH=$PATH:$GOPATH/bin
+
+/* rbenv */
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"

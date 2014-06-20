@@ -14,4 +14,6 @@ install:
 
 	[ -d ~/.vim ] || ln -sfn $(PWD)/vim ~/.vim
 	[ -f ~/.vimrc ] || ln -s $(PWD)/vim/vimrc ~/.vimrc
-	ln -s $(PWD)/Xresources ~/.Xresources
+	[ -f ~/.Xresources ] || ln -s $(PWD)/Xresources ~/.Xresources
+
+	[ -f ~/.gemrc ] || ln -s $(PWD)/gemrc ~/.gemrc
