@@ -11,3 +11,26 @@ command! -nargs=0 WS %s/\s\+$//gce
 
 set laststatus=2
 let g:airline_theme='wombat'
+
+set autoindent          " automatically indent new line
+set ts=4                " number of spaces in a tab
+set sw=4                " number of spaces for indent
+set et                  " expand tabs into spaces
+
+autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
+autocmd FileType sh setlocal ai sts=8 sw=8 noet
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=80 et si ai
+autocmd Filetype ruby,eruby,yaml setlocal ts=2 sw=2 ai et expandtab
+
+" Daima düzenlenen dosyanın bulunduğu dizine geç.
+autocmd BufEnter * lcd %:p:h
+
+" Dosyayı düzenlerken kursörü en son bilinen konuma al.
+autocmd BufReadPost *
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \	execute "normal g`\"" |
+            \ endif
+
+" Aşağıdaki kelimeleri daima renklendir.
+autocmd BufRead,BufNewFile * syntax keyword Todo TODO XXX FIXME
