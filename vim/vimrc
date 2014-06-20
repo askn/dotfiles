@@ -10,7 +10,7 @@ let g:go_disable_autoinstall = 1
 command! -nargs=0 WS %s/\s\+$//gce
 
 set laststatus=2
-let g:airline_theme='wombat'
+let g:airline_theme='powerlineish'
 
 set autoindent          " automatically indent new line
 set ts=4                " number of spaces in a tab
