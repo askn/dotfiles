@@ -34,3 +34,13 @@ autocmd BufReadPost *
 
 " Aşağıdaki kelimeleri daima renklendir.
 autocmd BufRead,BufNewFile * syntax keyword Todo TODO XXX FIXME
+
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
+
