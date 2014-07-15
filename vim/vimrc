@@ -44,3 +44,10 @@ vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
 
+let g:gitgutter_sign_added = 'a'
+let g:gitgutter_sign_modified = 'm'
+let g:gitgutter_sign_removed = 'd'
+
+highlight clear SignColumn
+
+let g:syntastic_ruby_checkers = ['rubocop']

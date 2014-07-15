@@ -1,0 +1,5 @@
+Documentation:
+  Enabled: false # reek already checks this and rubocop requires duplicate docs
+AsciiComments:
+  Enabled: false
+

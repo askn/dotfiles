@@ -11,10 +11,10 @@ alias g=git
 alias rm='rm -i'
 
 # enable color support of ls and also add handy aliases
-[ -x /usr/bin/dircolors ] && [ -r ~/.dircolors ] &&
-	eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-
-alias ls='ls --color=auto'
+# [ -x /usr/bin/dircolors ] && [ -r ~/.dircolors ] &&
+# 	eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#
+alias ls='ls -FGH'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
