@@ -1,4 +1,8 @@
 execute pathogen#infect()
+
+set number
+set relativenumber
+
 syntax on
 filetype plugin indent on
 
