@@ -2,4 +2,6 @@ Documentation:
   Enabled: false # reek already checks this and rubocop requires duplicate docs
 AsciiComments:
   Enabled: false
-
+LineLength:
+  Description: 'Limit lines to 80 characters.'
+  Enabled: false
