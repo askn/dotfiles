@@ -22,8 +22,11 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-
 alias ll='ls -l'
 alias la='ls -A'
 alias lc='ls -CF'
 alias lm='ls -al | less'
+
+alias r='rails'
+alias ber="bundle exec rspec"
+alias be="bundle exec"
