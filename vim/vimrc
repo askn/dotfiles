@@ -6,6 +6,12 @@ set relativenumber
 syntax on
 filetype plugin indent on
 
+set t_Co=256
+let g:rehash256 = 1
+
+set background=dark
+colorscheme monokai
+
 let g:go_fmt_command = "gofmt"
 " let g:go_fmt_fail_silently = 1
 let g:go_disable_autoinstall = 1

@@ -1,4 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/askingedik/_/_/hacking/config'
-let g:netrw_dirhist_2='/Users/askingedik/_/_/gelisiriciyiz-biz/app/controllers'
