@@ -16,3 +16,4 @@ install:
 	[ -f ~/.Xresources ] || ln -s $(PWD)/Xresources ~/.Xresources
 
 	[ -f ~/.gemrc ] || ln -s $(PWD)/gemrc ~/.gemrc
+	[ -f ~/.ackrc ] || ln -s $(PWD)/ackrc ~/.ackrc
