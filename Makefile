@@ -17,3 +17,4 @@ install:
 
 	[ -f ~/.gemrc ] || ln -s $(PWD)/gemrc ~/.gemrc
 	[ -f ~/.ackrc ] || ln -s $(PWD)/ackrc ~/.ackrc
+	[ -f ~/.irbc ] || ln -s $(PWD)/irbc ~/.irbc
