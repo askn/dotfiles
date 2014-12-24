@@ -216,3 +216,6 @@ nbproject/
 .svn
 target/
 _wiki/
+.idea
+
+.netrwhist

@@ -30,3 +30,9 @@ alias lm='ls -al | less'
 alias r='rails'
 alias ber="bundle exec rspec"
 alias be="bundle exec"
+
+alias cr="crystal"
+alias crfmt="crystal tool format"
+
+alias _g="cd ~/_/go/src/"
+alias _p="cd ~/_/protel/"

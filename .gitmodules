@@ -4,9 +4,6 @@
 [submodule "vim/bundle/tComment"]
 	path = vim/bundle/tComment
 	url = https://github.com/vim-scripts/tComment
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/UltiSnips"]
 	path = vim/bundle/UltiSnips
 	url = https://github.com/vim-scripts/UltiSnips
@@ -40,3 +37,18 @@
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
+[submodule "vim/bundle/splitjoin.vim"]
+	path = vim/bundle/splitjoin.vim
+	url = https://github.com/AndrewRadev/splitjoin.vim
+[submodule "vim/bundle/vim-multiple-cursors"]
+	path = vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
+[submodule "vim/bundle/vim-crystal"]
+	path = vim/bundle/vim-crystal
+	url = https://github.com/rhysd/vim-crystal
+[submodule "vim/bundle/vim-rspec"]
+	path = vim/bundle/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim

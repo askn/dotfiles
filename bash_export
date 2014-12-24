@@ -6,7 +6,17 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/_/go
 export PATH=$PATH:$GOPATH/bin
 
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+# export PATH=$HOME/.rbenv/bin:$PATH
+# eval "$(rbenv init -)"
 
 export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
