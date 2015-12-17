@@ -18,3 +18,4 @@ install:
 	[ -f ~/.gemrc ] || ln -s $(PWD)/gemrc ~/.gemrc
 	[ -f ~/.ackrc ] || ln -s $(PWD)/ackrc ~/.ackrc
 	[ -f ~/.irbrc ] || ln -s $(PWD)/irbrc ~/.irbrc
+	[ -f ~/.rubocop.yml ] || ln -s $(PWD)/rubocop.yml ~/.rubocop.yml

@@ -5,3 +5,5 @@ AsciiComments:
 LineLength:
   Description: 'Limit lines to 80 characters.'
   Enabled: false
+Style/BlockComments:
+  Enabled: false

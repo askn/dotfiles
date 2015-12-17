@@ -43,7 +43,7 @@ autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=80 et si ai
 autocmd Filetype ruby,eruby,yaml setlocal ts=2 sw=2 ai et expandtab
 
 " Daima düzenlenen dosyanın bulunduğu dizine geç.
-autocmd BufEnter * lcd %:p:h
+" autocmd BufEnter * lcd %:p:h
 
 " Dosyayı düzenlerken kursörü en son bilinen konuma al.
 autocmd BufReadPost *
@@ -101,3 +101,23 @@ vnoremap > >gv
 
 set wildmenu
 set wildmode=full
+set scrolloff=3
+set cursorline
+
+" if has('mouse')
+"   set mouse=v				 " set mouse for insert modes
+" endif
+
+let g:vimrubocop_config = '~/_/dotfiles/rubocop.yml'
+
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
