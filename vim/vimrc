@@ -104,20 +104,22 @@ set wildmode=full
 set scrolloff=3
 set cursorline
 
-" if has('mouse')
-"   set mouse=v				 " set mouse for insert modes
-" endif
-
 let g:vimrubocop_config = '~/_/dotfiles/rubocop.yml'
 
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+set fillchars-="vert:|"
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+hi VertSplit ctermbg=58 guibg=None
+hi Split ctermbg=58 guibg=None
+
+let g:airline#extensions#tabline#enabled = 1
+nmap <Tab><Tab> :CtrlPBuffer <CR>
+
+" Enable mouse events
+if has("mouse")
+  set mouse=a
+endif
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
