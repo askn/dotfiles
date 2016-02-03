@@ -114,7 +114,7 @@ set fillchars-="vert:|"
 hi VertSplit ctermbg=58 guibg=None
 hi Split ctermbg=58 guibg=None
 
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 nmap <Tab><Tab> :CtrlPBuffer <CR>
 
 " Enable mouse events
