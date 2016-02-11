@@ -93,7 +93,7 @@ set autoread
 
 set clipboard+=unnamed
 " explore level
-let g:netrw_liststyle=3
+" let g:netrw_liststyle=3
 
 " keep blocks selected when indenting
 vnoremap < <gv
@@ -123,3 +123,23 @@ if has("mouse")
 endif
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+set wrap!
+
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.jpg,*.jpeg,*.png,*.gif,vendor/**,db/sphinx,log/**,tmp/**,public/uploads,coverage/**
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=vendor/gems/*,vendor/ruby/*,node_modules/*,coverage/*
+
+" Better Completion
+set complete=.,b,u,]
+set completeopt=menu,preview
