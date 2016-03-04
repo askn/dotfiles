@@ -14,6 +14,7 @@ let g:rehash256 = 1
 
 set background=dark
 colorscheme Tomorrow-Night-Eighties
+" colorscheme molokai
 
 let g:go_fmt_command = "gofmt"
 " let g:go_fmt_fail_silently = 1
@@ -109,10 +110,10 @@ let g:vimrubocop_config = '~/_/dotfiles/rubocop.yml'
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
 
-set fillchars-="vert:|"
+set fillchars="vert:"
 
-hi VertSplit ctermbg=58 guibg=None
-hi Split ctermbg=58 guibg=None
+hi VertSplit ctermbg=136 guibg=None
+hi Split ctermbg=136 guibg=None
 
 " let g:airline#extensions#tabline#enabled = 1
 nmap <Tab><Tab> :CtrlPBuffer <CR>
@@ -152,3 +153,5 @@ autocmd BufRead * match ExtraWhitespace /\s\+$/
 " The above flashes annoyingly while typing, be calmer in insert mode
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+
+set noerrorbells visualbell t_vb=
