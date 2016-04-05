@@ -19,3 +19,5 @@ install:
 	[ -f ~/.ackrc ] || ln -s $(PWD)/ackrc ~/.ackrc
 	[ -f ~/.irbrc ] || ln -s $(PWD)/irbrc ~/.irbrc
 	[ -f ~/.rubocop.yml ] || ln -s $(PWD)/rubocop.yml ~/.rubocop.yml
+
+	[ -d ~/nvim ] || ln -sfn $(PWD)/nvim ~/.config/nvim
