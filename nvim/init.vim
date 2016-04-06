@@ -18,7 +18,8 @@ Plug 'rhysd/vim-crystal'
 Plug 'thoughtbot/vim-rspec'
 Plug 'mileszs/ack.vim'
 Plug 'ngmy/vim-rubocop'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'unblevable/quick-scope'
 
 call plug#end()
 
@@ -103,11 +104,11 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-if has("nvim")
-    let g:rspec_command = "term bundle exec rspec -f d -c {spec}"
-else
-    let g:rspec_command = "!bundle exec rspec -f d -c {spec}"
-endif
+map <Leader>e :e .<CR>
+
+let g:rspec_command = ":term\ bundle\ exec\ rspec\ -f d -c {spec}"
+
+" map <silent> <Leader>pp :rightbelow vs term://bundle\ exec\ rspec\ %<CR>
 
 set incsearch
 set hlsearch " highlight the search
