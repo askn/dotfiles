@@ -1,3 +1,5 @@
+AllCops:
+  TargetRubyVersion: 2.3
 Documentation:
   Enabled: false # reek already checks this and rubocop requires duplicate docs
 AsciiComments:

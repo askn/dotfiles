@@ -18,10 +18,14 @@ Plug 'rhysd/vim-crystal'
 Plug 'thoughtbot/vim-rspec'
 Plug 'mileszs/ack.vim'
 Plug 'ngmy/vim-rubocop'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'unblevable/quick-scope'
+Plug 'Shougo/deoplete.nvim'
 
 call plug#end()
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 let mapleader = "-"
 
@@ -99,14 +103,18 @@ let g:multi_cursor_next_key='<C-d>'
 
 map <C-n> :Explore<cr>
 
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+map <silent> <Leader>t :call RunCurrentSpecFile()<CR>
+map <silent> <Leader>s :call RunNearestSpec()<CR>
+map <silent> <Leader>l :call RunLastSpec()<CR>
+map <silent> <Leader>a :call RunAllSpecs()<CR>
 
 map <Leader>e :e .<CR>
 
-let g:rspec_command = ":term\ bundle\ exec\ rspec\ -f d -c {spec}"
+let g:rspec_runner = "os_x_iterm2"
+
+let g:rspec_command = ":term bundle exec rspec -f d -c {spec}"
+set splitright
+set splitbelow
 
 " map <silent> <Leader>pp :rightbelow vs term://bundle\ exec\ rspec\ %<CR>
 
