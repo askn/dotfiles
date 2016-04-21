@@ -1,4 +1,28 @@
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'fatih/vim-go'
+Plug 'vim-scripts/tComment'
+Plug 'vim-scripts/UltiSnips'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/syntastic'
+Plug 'junegunn/vim-easy-align'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
+Plug 'kien/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'rhysd/vim-crystal'
+Plug 'thoughtbot/vim-rspec'
+Plug 'mileszs/ack.vim'
+Plug 'ngmy/vim-rubocop'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'unblevable/quick-scope'
+Plug 'Shougo/deoplete.nvim'
+
+call plug#end()
 
 let mapleader = "-"
 
@@ -81,13 +105,19 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+let g:rspec_runner = "os_x_iterm2"
+
 let g:rspec_command = "!bundle exec rspec -f d -c {spec}"
 
-set hlsearch " highlight the search
+set splitright
+set splitbelow
+
 set incsearch
+set hlsearch " highlight the search
 
 " clear search
-map <silent> <space><space> :let @/=''<CR>
+" map <silent> <space><space> :let @/=''<CR>
+map <silent> <space><space> :nohlsearch<CR>
 
 " buffer
 set autoread
@@ -155,3 +185,6 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 set noerrorbells visualbell t_vb=
+
+set lazyredraw
+set ttyfast
