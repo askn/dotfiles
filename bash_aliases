@@ -27,7 +27,6 @@ alias la='ls -A'
 alias lc='ls -CF'
 alias lm='ls -al | less'
 
-alias r='rails'
 alias ber="bundle exec rspec"
 alias be="bundle exec"
 
@@ -36,3 +35,12 @@ alias crfmt="crystal tool format"
 
 alias _g="cd ~/_/go/src/"
 alias _p="cd ~/_/protel/"
+
+alias vim="nvim"
+
+alias bilo="bundle exec rake db:migrate:reset"
+alias bilot="bundle exec rake db:migrate:reset RAILS_ENV=test"
+alias rdm="bundle exec rake db:migrate"
+alias rdmt="bundle exec rake db:migrate RAILS_ENV=test"
+
+alias gmd="railroady -a -i -M|dot -Tsvg > models.svg"

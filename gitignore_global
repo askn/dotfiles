@@ -20,6 +20,7 @@
 *.orig
 *.rej
 *.sw
+*.sw[a-z]
 .*.sw[a-z]
 *.swp
 

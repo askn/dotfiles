@@ -7,3 +7,5 @@ unset file
 
 . ~/.nvm/nvm.sh  # This loads nvm
 source "$HOME/_/dotfiles/completion/git-completion.bash"
+export PATH="$HOME/.crenv/bin:$PATH"
+eval "$(crenv init -)"
