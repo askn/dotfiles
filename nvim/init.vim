@@ -3,6 +3,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'neomake/neomake'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 Plug 'unblevable/quick-scope'
 
 Plug 'kien/ctrlp.vim'
@@ -13,11 +15,15 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'janko-m/vim-test'
 Plug 'AndrewRadev/splitjoin.vim'
+
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-colorscheme Tomorrow-Night-Eighties
+" colorscheme Tomorrow-Night-Eighties
+colorscheme gruvbox
 set background=dark
 filetype plugin indent on
 syntax on
@@ -91,13 +97,15 @@ autocmd BufRead * match ExtraWhitespace /\s\+$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
-" Eklenti Ayarları
+
+" ------------ Eklenti Ayarları -----------------------
 " ctrl p
 nmap <Tab><Tab> :CtrlPBuffer <CR>
 
 " airline
 set laststatus=2
-let g:airline_theme='powerlineish'
+" let g:airline_theme='powerlineish'
+let g:airline_theme='gruvbox'
 
 " vim test
 nmap <silent> <leader>t :TestNearest<CR>
@@ -117,7 +125,8 @@ let g:neomake_ruby_enabled_makers = ['rubocop']
 " multi cursor
 let g:multi_cursor_next_key='<C-d>'
 
-
+" deoplete.
+let g:deoplete#enable_at_startup = 1
 
 " tcomment için
 " control _ + p paragraf
