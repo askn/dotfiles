@@ -1,5 +1,24 @@
-AllCops:
+AllCop:
   TargetRubyVersion: 2.3
+  DisplayCopNames: true
+  Excludes:
+    - 'spec/dummy/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'db/*'
+    - 'db/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+
+require:
+  - rubocop-rspec
+
+inherit_from:
+  - http://shopify.github.io/ruby-style-guide/rubocop.yml
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Documentation:
   Enabled: false # reek already checks this and rubocop requires duplicate docs
 AsciiComments:
@@ -8,4 +27,8 @@ LineLength:
   Description: 'Limit lines to 80 characters.'
   Enabled: false
 Style/BlockComments:
+  Enabled: false
+Style/MutableConstant:
+  Enabled: false
+Style/FrozenStringLiteralComment:
   Enabled: false

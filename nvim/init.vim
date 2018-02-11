@@ -1,7 +1,10 @@
+source ~/.config/nvim/autocorrect.vim
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tomtom/tcomment_vim'
-Plug 'neomake/neomake'
+Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
@@ -20,6 +23,9 @@ Plug 'janko-m/vim-test'
 Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'morhetz/gruvbox'
+Plug 'will133/vim-dirdiff'
+
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 " colorscheme Tomorrow-Night-Eighties
@@ -50,10 +56,12 @@ set fillchars="vert:"
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.jpg,*.jpeg,*.png,*.gif,vendor/**,db/sphinx,log/**,tmp/**,public/uploads,coverage/**
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=vendor/gems/*,vendor/ruby/*,node_modules/*,coverage/*
+set wildignore+=rdoc/**
 set lazyredraw
 set ttyfast
 set t_Co=256
 set showmatch     " Show matching of: () [] {}
+set mouse+=a
 
 set clipboard+=unnamed
 
@@ -70,6 +78,16 @@ autocmd FileType sh setlocal ai sts=8 sw=8 noet
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=80 et si ai
 autocmd Filetype cr,ruby,eruby,yaml setlocal ts=2 sw=2 ai et expandtab
+
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 23
+" augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+" augroup END
 
 " Aşağıdaki kelimeleri daima renklendir.
 autocmd BufRead,BufNewFile * syntax keyword Todo TODO XXX FIXME
@@ -116,11 +134,9 @@ nmap <silent> <leader>g :TestVisit<CR>
 let test#strategy = "neovim"
 let test#ruby#rspec#executable = ":tabnew | term bundle exec rspec -f d -c"
 
-" neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_ruby_enabled_makers = ['rubocop']
-" :Neomake rubocop
-" :Neomake reek
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_fixers = {'ruby': ['rubocop']}
 
 " multi cursor
 let g:multi_cursor_next_key='<C-d>'
@@ -128,9 +144,19 @@ let g:multi_cursor_next_key='<C-d>'
 " deoplete.
 let g:deoplete#enable_at_startup = 1
 
+" nerdtree
+noremap <Leader><Leader> :NERDTreeToggle<CR>
+
 " tcomment için
 " control _ + p paragraf
 " control _ + b block
 "
 " gS gJ splitjoin
 " f F sonrası , tekrarlar
+"
+"
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
