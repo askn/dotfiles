@@ -221,3 +221,4 @@ _wiki/
 .idea
 
 .netrwhist
+*.rdb

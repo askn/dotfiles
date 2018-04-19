@@ -2,5 +2,7 @@
 --ignore-dir=tmp
 --ignore-dir=vendor
 --ignore-dir=.idea
+--ignore-dir=coverage
 --ignore-dir=nbproject
+--ignore-file=match:/.sql$/
 --sort-files
